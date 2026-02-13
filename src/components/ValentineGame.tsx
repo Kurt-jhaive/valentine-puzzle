@@ -198,7 +198,7 @@ export default function ValentineGame() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Give Up? 😅
+                Give Up?
               </motion.button>
             )}
           </AnimatePresence>

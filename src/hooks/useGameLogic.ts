@@ -23,13 +23,14 @@ export interface GameState {
 }
 
 const YES_ERROR_MESSAGES = [
-  "SAY YES! IT'S OBVIOUS, IT'S 3 LETTERS! 💕",
-  "Come on... just type Y-E-S! 🥺",
-  "Hint: It rhymes with 'bless' 💝",
-  "Three little letters... Y... E... S... 💗",
-  "The answer is literally staring at you! 😘",
-  "Just say YES already! 💘",
-  "Not that hard... starts with Y! 💖",
+  "SAY YES! IT'S OBVIOUS, IT'S 3 LETTERS!",
+  "Come on... just type Y-E-S!",
+  "LOL OBVIOUS NA YAN",
+  "wala kang kiss saken",
+  "di mo na ba ko love? hahaha",
+  "wala kang choice HAHAHAHA",
+  "KAHIT GRADE 1 MASASAGOT YAN"
+
 ];
 
 const WORD_HINTS: Record<string, string[]> = {
