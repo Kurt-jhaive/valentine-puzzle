@@ -76,14 +76,14 @@ export default function WordBoxes({
         return (
           <motion.div
             key={word}
-            className="flex items-center gap-1"
+            className="flex items-center gap-0.5 sm:gap-1"
             variants={wordVariants}
             initial="hidden"
             animate="visible"
             custom={wordIndex}
           >
             {/* Star icon for solved words (left side) */}
-            <div className="w-8 flex items-center justify-center">
+            <div className="w-6 sm:w-8 flex items-center justify-center">
               <AnimatePresence>
                 {isSolved && (
                   <motion.span
@@ -100,11 +100,11 @@ export default function WordBoxes({
             </div>
 
             {/* Letter boxes */}
-            <div className="flex gap-1">
+            <div className="flex gap-px sm:gap-1">
               {word.split("").map((letter, letterIndex) => (
                 <motion.div
                   key={`${word}-${letterIndex}`}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 flex items-center justify-center text-lg sm:text-xl font-bold"
+                  className="w-7 h-7 sm:w-12 sm:h-12 rounded-lg border-2 flex items-center justify-center text-base sm:text-xl font-bold"
                   variants={letterVariants}
                   initial="empty"
                   animate={
@@ -143,7 +143,7 @@ export default function WordBoxes({
             {/* Question mark after VALENTINE (before right star) */}
             {word === "VALENTINE" && showQuestionMark && (
               <motion.div
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 flex items-center justify-center text-lg sm:text-xl font-bold ml-1"
+                className="w-7 h-7 sm:w-12 sm:h-12 rounded-lg border-2 flex items-center justify-center text-base sm:text-xl font-bold"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{
                   scale: 1,
@@ -171,7 +171,7 @@ export default function WordBoxes({
             )}
 
             {/* Star icon for solved words (right side) */}
-            <div className="w-8 flex items-center justify-center">
+            <div className="w-6 sm:w-8 flex items-center justify-center">
               <AnimatePresence>
                 {isSolved && (
                   <motion.span

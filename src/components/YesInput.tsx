@@ -72,7 +72,7 @@ export default function YesInput({
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          YAYYY! dapat lang no HAHAHAHAHAHAHA I LOVE YOU SO MUCH!
+          YAYYY! dapat lang no HAHAHAHAHAHAHA
         </motion.p>
         <motion.p
           className="text-xl text-white/90 text-center"
@@ -80,7 +80,7 @@ export default function YesInput({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          happy valentine&apos;s day, tephie ko! 
+          happy valentine&apos;s day, jhunnice!
         </motion.p>
       </motion.div>
     );
