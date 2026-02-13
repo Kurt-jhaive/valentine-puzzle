@@ -140,29 +140,7 @@ export default function WordBoxes({
               ))}
             </div>
 
-            {/* Star icon for solved words (right side) */}
-            <div className="w-8 flex items-center justify-center">
-              <AnimatePresence>
-                {isSolved && (
-                  <motion.span
-                    initial={{ scale: 0, rotate: 180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    exit={{ scale: 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 10,
-                      delay: 0.2,
-                    }}
-                    className="text-xl"
-                  >
-                    ⭐
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Question mark after VALENTINE */}
+            {/* Question mark after VALENTINE (before right star) */}
             {word === "VALENTINE" && showQuestionMark && (
               <motion.div
                 className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 flex items-center justify-center text-lg sm:text-xl font-bold ml-1"
@@ -191,6 +169,28 @@ export default function WordBoxes({
                 </motion.span>
               </motion.div>
             )}
+
+            {/* Star icon for solved words (right side) */}
+            <div className="w-8 flex items-center justify-center">
+              <AnimatePresence>
+                {isSolved && (
+                  <motion.span
+                    initial={{ scale: 0, rotate: 180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    exit={{ scale: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 10,
+                      delay: 0.2,
+                    }}
+                    className="text-xl"
+                  >
+                    ⭐
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </div>
           </motion.div>
         );
       })}
